@@ -20,5 +20,4 @@ docker run -d \
     --network host \
     suricata:latest \
         -i <INTERFACE>
-        ```
-
+```
