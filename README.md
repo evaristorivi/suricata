@@ -29,7 +29,7 @@ docker run -d \
     --name suricata \
     --privileged \
     --network host \
-    suricata:latest \
+    evaristorivi/suricata \
         -i <INTERFACE>
 ```
 
