@@ -47,5 +47,5 @@ B) Dockerfile
 ```
 git clone https://github.com/evaristorivi/suricata
 cd suricata
-docker build -f docker/Dockerfile -t suricata:latest .
+docker build -f Dockerfile -t suricata:latest .
 ```
