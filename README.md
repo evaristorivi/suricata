@@ -38,4 +38,14 @@ Accediendo al contenedor
 ```
 docker exec -it suricata /bin/bash
 ```
+Comprobación
+------------------------
+Desde un cliente ejecutar:
+```
+curl -A "BlackSun" www.google.com
+```
+Si la instancia de Suricata está funcionando correctamente, debería ver la siguiente línea que termina en su "fast.log" en /var/log/suricata
+```
+ ET USER_AGENTS Suspicious User Agent (BlackSun) [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 
+```
 
