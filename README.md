@@ -18,7 +18,6 @@ El proyecto y el código de Suricata son propiedad y están respaldados por la O
 Instalación
 ------------
 ```
-
 git clone https://github.com/evaristorivi/suricata
 cd suricata
 docker build -f docker/Dockerfile -t suricata:latest .
@@ -26,7 +25,6 @@ docker build -f docker/Dockerfile -t suricata:latest .
 
 Lanzar contenedor
 -----------------
-
 ```
 docker run -d \
     --name suricata \
