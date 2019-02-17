@@ -16,12 +16,10 @@ El rápido desarrollo impulsado por la comunidad de Suricata se centra en la seg
 
 El proyecto y el código de Suricata son propiedad y están respaldados por la Open Information Security Foundation ( OISF ), una fundación sin fines de lucro comprometida a garantizar el desarrollo y el éxito sostenido de Suricata como un proyecto de código abierto.
 
-Instalación
+A) Instalación
 ------------
 ```
-git clone https://github.com/evaristorivi/suricata
-cd suricata
-docker build -f docker/Dockerfile -t suricata:latest .
+docker pull evaristorivi/suricata
 ```
 
 Lanzar contenedor
@@ -39,4 +37,15 @@ Accediendo al contenedor
 ------------------------
 ```
 docker exec -it suricata /bin/bash
+```
+
+
+
+
+B) Dockerfile
+------------------------
+```
+git clone https://github.com/evaristorivi/suricata
+cd suricata
+docker build -f docker/Dockerfile -t suricata:latest .
 ```
