@@ -21,3 +21,9 @@ docker run -d \
     suricata:latest \
         -i <INTERFACE>
 ```
+
+Accediendo al contenedor
+------------------------
+```
+docker exec -it suricata /bin/bash
+```
