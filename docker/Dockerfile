@@ -75,7 +75,7 @@ RUN rm -rf /var/lib/apt/lists/* && \
 
 # Inject an entrypoint script to run suricata-update then suricata
 # with suricata-update's rules applied.
-RUN echo "#!/bin/sh\nsuricata-update && suricata -S /var/lib/suricata/rules/suricata.rules \$@" \
+RUN echo "#!/bin/sh\nsuricata-update && suricata -c /etc/suricata/suricata.yaml \$@" \
     > /usr/local/bin/entrypoint.sh && \
     chmod +x /usr/local/bin/entrypoint.sh
 
