@@ -39,13 +39,3 @@ Accediendo al contenedor
 docker exec -it suricata /bin/bash
 ```
 
-
-
-
-B) Dockerfile
-------------------------
-```
-git clone https://github.com/evaristorivi/suricata
-cd suricata
-docker build -f Dockerfile -t suricata:latest .
-```
