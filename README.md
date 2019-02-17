@@ -7,6 +7,8 @@ Suricata es un motor de IDS, IPS y NSM de red.
 
 Instalación
 ------------
+```
+
 git clone https://github.com/evaristorivi/suricata
 cd suricata
 docker build -f docker/Dockerfile -t suricata:latest .
@@ -18,3 +20,5 @@ docker run -d \
     --network host \
     suricata:latest \
         -i <INTERFACE>
+        ```
+
