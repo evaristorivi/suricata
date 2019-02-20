@@ -2,6 +2,8 @@ Suricata
 ========
 <img src="https://i.ibb.co/CJxDn7g/69524480e9c7138de37a53a61d190aa0.gif" alt="vistaprevia" border="0">
 
+El sistema de detección de intrusiones de código abierto, en Docker, creado a partir de fuentes con soporte de actualización de suricata, Hyperscan, GeoIP y Lua.
+
 Introducción
 ------------
 Suricata es un motor de detección de amenazas de red gratuito, de código abierto, maduro, rápido y robusto.
@@ -16,7 +18,7 @@ El rápido desarrollo impulsado por la comunidad de Suricata se centra en la seg
 
 El proyecto y el código de Suricata son propiedad y están respaldados por la Open Information Security Foundation ( OISF ), una fundación sin fines de lucro comprometida a garantizar el desarrollo y el éxito sostenido de Suricata como un proyecto de código abierto.
 
-Instalación
+Instalación rápida
 ------------
 ```
 docker pull evaristorivi/suricata
@@ -32,6 +34,27 @@ docker run -d \
     evaristorivi/suricata \
         -i <INTERFACE>
 ```
+La última línea es para los argumentos de Suricata. Como mínimo deberemos de indicarle nuestra interfaz de red (ej: -i ens3)
+Para más argumentos: https://suricata.readthedocs.io/en/latest/command-line-options.html
+
+En algunos sistemas el contenedor se cierra nada más arrancar, si te ducede esto, entonces:
+-----------------
+```
+git clone https://github.com/evaristorivi/suricata
+cd suricata
+docker build -f Dockerfile -t suricata:latest .
+```
+Lanzar contenedor
+-----------------
+```
+docker run -d \
+    --name suricata \
+    --privileged \
+    --network host \
+    suricata:latest \
+        -i <INTERFACE>
+```
+---------------------------------------------------------------------------------------
 
 Accediendo al contenedor
 ------------------------
