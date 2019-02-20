@@ -37,7 +37,7 @@ docker run -d \
 La última línea es para los argumentos de Suricata. Como mínimo deberemos de indicarle nuestra interfaz de red (ej: -i ens3)
 Para más argumentos: https://suricata.readthedocs.io/en/latest/command-line-options.html
 
-En algunos sistemas el contenedor se cierra nada más arrancar, si te ducede esto, entonces:
+En algunos sistemas el contenedor se cierra nada más arrancar, si te sucede esto, entonces:
 -----------------
 ```
 git clone https://github.com/evaristorivi/suricata
